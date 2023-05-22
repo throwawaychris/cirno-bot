@@ -43,10 +43,10 @@ module.exports = {
         }
 
         if (interaction.options.getString('question') === null) {
-            await interaction.reply(quote);
+            await interaction.reply(`**${quote}**`);
         } else {
             const question = interaction.options.getString('question');
-            await interaction.reply(`> ${question}\n**${quote}**`);
+            await interaction.reply(`> *${question}*\n**${quote}**`);
             //await interaction.reply(quote);
         }
     }
