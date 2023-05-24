@@ -1,9 +1,6 @@
 # cirno-bot
-Cirno themed discord bot
+Cirno themed light-weight discord bot
 
-### Prerequisites
+### Dependencies
 - Discord.js
-- dotenv (optional)
-- eslint (optional)
-
-Make sure to initialize your directory with node to set-up the necessary node.modules
+- napi-rs/canvas
