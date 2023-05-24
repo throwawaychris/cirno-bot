@@ -15,5 +15,6 @@ module.exports = {
         //await interaction.reply('Sorry, this is a wip command!');
         //await interaction.reply(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`);
         await interaction.reply(`${user.displayAvatarURL({ size: '1024' })}`);
+        console.log(user.displayAvatarURL({ size: '1024' }));
     }
 }
