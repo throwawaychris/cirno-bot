@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, AttachmentBuilder, GuildMember, CommandInteraction } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -13,6 +13,7 @@ module.exports = {
         const user = interaction.options.getUser('target');
 
         //await interaction.reply('Sorry, this is a wip command!');
-        await interaction.reply(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`);
+        //await interaction.reply(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`);
+        await interaction.reply(`${user.displayAvatarURL({ size: '1024' })}`);
     }
 }
