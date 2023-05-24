@@ -82,3 +82,6 @@ client.on(Events.InteractionCreate, async interaction => {
 
 // Log in to Discord with your client's token
 client.login(token);
+
+// Change the bot status
+client.user.setActivity("ばかじゃないもん！");
