@@ -17,7 +17,7 @@ module.exports = {
         last = -1;
         repeat = 0;
         
-        await interaction.reply(`(**${d}**)`);
+        await interaction.reply(`**${d}**`);
 
         while (d > 0) {            
             last = d % 10;
