@@ -15,19 +15,21 @@ module.exports = {
         let d = Math.floor((Math.random()*max)+1);
         msg = "";
         last = -1;
-        repeating = 0;
+        repeat = 0;
+        
+        await interaction.reply(`(**${d}**)`);
 
-        await interaction.reply(`(${d})`);
+        while (d > 0) {            
+            last = d % 10;
+            d = Math.floor(d / 10);
 
-        while (number > 0) {
-            if (last === (d%10)) { repeating++ }; consolelog(last);
-            
-            last = d % 10; console.log(last);
-            d = d / 10; console.log(d);
+            if (last === (d%10)) {
+                repeat++;
+            } else {break;}
         }
 
         // Process dubs
-        switch (repeating) {
+        switch (repeat) {
             case 0:
                 break;
             case 1:
@@ -44,6 +46,8 @@ module.exports = {
                 break;
         }
 
-        await interaction.followUp(msg);
+        if (msg != "") {
+            await interaction.followUp(msg);
+        }
     }
 }
