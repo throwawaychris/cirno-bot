@@ -20,10 +20,10 @@ module.exports = {
         await interaction.reply(`(${d})`);
 
         while (number > 0) {
-            if (last === (d%10)) { repeating++ };
+            if (last === (d%10)) { repeating++ }; consolelog(last);
             
-            last = d % 10;
-            d = d / 10;
+            last = d % 10; console.log(last);
+            d = d / 10; console.log(d);
         }
 
         // Process dubs
