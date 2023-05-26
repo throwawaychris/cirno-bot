@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Node's native file system module used to read commands directory and identify command files
 const fs = require('node:fs');
 // Node's native path utility module. Helps construct paths to access files and directories
