@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('info')
-        .setDescription('Get info about a user or server')
+        .setDescription('Get info about a user or server or cirno')
         .addSubcommand(subcommand =>
             subcommand
                 .setName('user')

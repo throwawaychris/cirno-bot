@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('avatar')
-        .setDescription('retrieve a user\'s profile picture')
+        .setDescription('Retrieve a user\'s profile picture')
         .addUserOption(option =>
             option
                 .setName('target')

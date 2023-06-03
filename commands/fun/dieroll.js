@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('dieroll')
-        .setDescription('Roll a random 6 sided dies')
+        .setDescription('Roll a random 6 sided die(s)')
         .addIntegerOption(option =>
             option
                 .setName('amount')

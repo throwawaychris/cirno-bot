@@ -1,3 +1,4 @@
+const { bold, italic, strikethrough, underscore, spoiler, quote, blockQuote } = require('discord.js');
 const fs = require('fs');
 const path = require('node:path');
 const { SlashCommandBuilder } = require('@discordjs/builders');
@@ -7,20 +8,20 @@ module.exports = {
         .setName('help')
         .setDescription('Lists all available commands'),
     async execute(interaction) {
-        let msg // message line holding a command and its description
+        let msg = "";// message line holding a command and its description
 
-        const foldersPath = path.join(__dirname, 'commands');
+        const foldersPath = path.join(process.cwd(), 'commands');
         const commandFolders = fs.readdirSync(foldersPath);
 
         for (const folder of commandFolders) {
             const commandsPath = path.join(foldersPath, folder);
-            const commandFiles = fs.reddirSync(commandsPath).filter(file => file.endsWith('.js'));
+            const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
             for (const file of commandFiles) {
                 const filePath = path.join(commandsPath, file);
                 const command = require(filePath);
 
                 // Append each file name into msg
-                msg += `*${command.data.name}* \t\t\t **${command.data.description}** \n`;
+                msg += `${bold(command.data.name)} - ${italic(command.data.description)} \n`;
             }
         }
 
