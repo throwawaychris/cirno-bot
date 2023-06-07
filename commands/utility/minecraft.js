@@ -15,6 +15,6 @@ module.exports = {
         .setThumbnail('https://cdn.discordapp.com/attachments/1112181812534456390/1115790789335855204/server-icon.png')
         .setTimestamp();
 
-        channel.send({embeds:[minecraftEmbed]});
+        await interaction.reply({embeds:[minecraftEmbed]});
     }
 }
