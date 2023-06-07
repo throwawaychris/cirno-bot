@@ -13,6 +13,8 @@ module.exports = {
         .setURL('https://cdn.discordapp.com/attachments/1116051579825553428/1116103069667709039/image.png')
         .setDescription('Minecraft-server by *@throwawaychris*')
         .setThumbnail('https://cdn.discordapp.com/attachments/1112181812534456390/1115790789335855204/server-icon.png')
+        .addFields({name: 'List of mods', value: 'Vanilla'})
+        .setImage('https://cdn.discordapp.com/attachments/1116051579825553428/1116103069667709039/image.png')
         .setTimestamp();
 
         await interaction.reply({embeds:[minecraftEmbed]});
