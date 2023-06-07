@@ -9,9 +9,9 @@ module.exports = {
 
         const minecraftEmbed = new EmbedBuilder()
         .setColor(0xFAB81E)
-        .setTitle('You Work You Lose Minecraft-server')
-        .setAuthor({name: `throwawaychris`, url: 'https://github.com/throwawaychris'})
-        .setDescription('Join: **by-sr.joinmc.link**')
+        .setTitle('by-sr.joinmc.link')
+        .setURL('https://cdn.discordapp.com/attachments/1116051579825553428/1116103069667709039/image.png')
+        .setDescription('Minecraft-server by *@throwawaychris*')
         .setThumbnail('https://cdn.discordapp.com/attachments/1112181812534456390/1115790789335855204/server-icon.png')
         .setTimestamp();
 
