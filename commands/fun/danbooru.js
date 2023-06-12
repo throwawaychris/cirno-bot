@@ -21,7 +21,7 @@ module.exports = {
 
         // Construct url
         if (interaction.options.getBoolean('nsfw')) {
-            url += 'nsfw';
+            url += 'is:nsfw';
         }
 
         if (!(interaction.options.getString('tag') === null)) {
