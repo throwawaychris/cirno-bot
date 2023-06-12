@@ -2,28 +2,20 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('danbooru')
-        .setDescription('Retrives a random danbooru image')
-        .addBooleanOption(option =>
-            option
-                .setName('nsfw')
-                .setDescription('Get an NSFW post'))
+        .setName('safebooru')
+        .setDescription('Retrives a random SFW image from safebooru')
         .addStringOption(option =>
             option
                 .setName('tag')
                 .setDescription('Define a tag for the image (2 tags max)'))
         .setDefaultMemberPermissions(0),
     async execute(interaction) {
-        let url = 'https://danbooru.donmai.us/posts/random.json?tags=';
+        let url = 'https://safebooru.donmai.us/posts/random.json?tags=';
         let response;
         let data;
-        let danbooruColor = 0xf5318c;
+        let danbooruColor = 0x3176f5;
 
         // Construct url
-        if (interaction.options.getBoolean('nsfw')) {
-            url += 'nsfw';
-        }
-
         if (!(interaction.options.getString('tag') === null)) {
             url += `+${interaction.options.getString('tag')}`;
         }
