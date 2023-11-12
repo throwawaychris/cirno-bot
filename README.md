@@ -1,10 +1,18 @@
+<div align="center">
+  <picture>
+    <img alt="logo" src="https://cdn.discordapp.com/attachments/1109269156337025095/1173170236242001950/Cirno.round.32233248885.png?ex=6562faec&is=655085ec&hm=c56afcedca90e18bd1e28ed9580993307c5f61c29f11d57a8b5c11951bc272b3&">
+  </picture>
+</div>
+
 # cirno-bot
+
 A light weight Cirno-themed discord bot. For personal usage & fun.
 
 ## Getting Started
 
-1. Install [node](https://nodejs.org/en/) if you haven't already. Make sure it's ```v16.11.0``` or higher.
-   Check the version by typing ```node -v```.
+1. Install [node](https://nodejs.org/en/) if you haven't already.
+   > [!WARNING]
+   > Make sure it's ```v16.11.0``` or higher. Check the version by typing ```node -v```.
    
 3. Clone the repository into the location of you're choosing.
 
@@ -37,7 +45,7 @@ Create ```config.json``` in the project root and insert your own tokens as such:
 
 Install .env.
 
-```bash
+```
 npm install dotenv
 ```
 
@@ -76,7 +84,8 @@ Adjust ```index.js``` and ```deploy-commands.js``` to use .env.
 
    Make sure to replace the appropiate token calls to the .env calls
 
-You can find more information about this [here](https://discordjs.guide/creating-your-bot/#using-config-json).
+> [!NOTE]
+> You can find more information about this [here](https://discordjs.guide/creating-your-bot/#using-config-json).
 
 ## Usage
 
@@ -119,7 +128,8 @@ module.exports = {
 
 Just change the name and description to what you want and insert your code into the execute function.
 
-You can find more on this on [discord.js](https://discordjs.guide/creating-your-bot/slash-commands.html#individual-command-files).
+> [!NOTE]
+> You can find more on this on [discord.js](https://discordjs.guide/creating-your-bot/slash-commands.html#individual-command-files).
 
 ## Adding cirno-bot as a linux service
 
