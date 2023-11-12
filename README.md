@@ -1,5 +1,5 @@
 # cirno-bot
-A light weight Cirno-themed discord bot.
+A light weight Cirno-themed discord bot. For personal usage & fun.
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ A light weight Cirno-themed discord bot.
 
 Create the appropiate config file for the bot and guild tokens.
 
-### Using config.json
+### Using config.json (default)
 
 Create ```config.json``` in the project root and insert your own tokens as such:
 
@@ -120,3 +120,48 @@ module.exports = {
 Just change the name and description to what you want and insert your code into the execute function.
 
 You can find more on this on [discord.js](https://discordjs.guide/creating-your-bot/slash-commands.html#individual-command-files).
+
+## Adding cirno-bot as a linux service
+
+Since ```index.js``` already comes with ```#!/usr/bin/env node```, you can ```chmod +x index.js``` and add it as a daemon service.
+
+1. Create the service file:
+   ```
+   sudo nano /etc/systemd/system/cirno-bot.service
+   ```
+   
+   ```.service
+   [Unit]
+   Description=Cirno discord bot
+   After=network.target
+
+   [Service]
+   ExecStart= # Whereever you put Cirno in (ie. /home/user/cirno-bot/index.js)
+   Restart=always
+   # Use your username if you have sole permissions to the directory
+   User=nobody
+   # Use 'nogroup' group for Ubuntu/Debian
+   # use 'nobody' group for Fedora
+   Group=nogroup
+   Environment=PATH=/usr/bin:/usr/local/bin
+   Environment=NODE_ENV=production
+   WorkingDirectory= # Whereever you put Cirno in (ie. /home/user/cirno-bot)
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+2. Reload daemon
+   ```
+   sudo systemctl daemon-reload
+   ```
+
+3. Start Cirno service
+   ```
+   sudo systemctl start cirno-bot.service
+   ```
+
+4. Start Cirno on boot
+   ```
+   sudo systemctl enable cirno-bot.service
+   ```
