@@ -11,6 +11,8 @@ const path = require('node:path');
 
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+
+// Require bot tokens, remove if using another config file format.
 const { token } = require('./config.json');
 
 // Create a new client instance
