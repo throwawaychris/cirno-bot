@@ -16,5 +16,5 @@ module.exports = {
         //await interaction.reply(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=1024`);
         await interaction.reply(`${user.displayAvatarURL({ dynamic:true, size:4096})}`);
         console.log(user.displayAvatarURL({ dynamic:true, size:4096 }));
-    }
-}
+    },
+};

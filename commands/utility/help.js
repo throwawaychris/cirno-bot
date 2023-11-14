@@ -29,5 +29,5 @@ module.exports = {
             content: `# Commands\n${msg}`,
             ephemeral: true,
         });
-    }
-}
+    },
+};

@@ -68,5 +68,5 @@ module.exports = {
         }
 
         //await interaction.followUp({content: `${url}`, ephemeral: true});
-    }
-}
+    },
+};

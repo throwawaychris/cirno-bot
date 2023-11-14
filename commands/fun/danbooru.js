@@ -11,8 +11,7 @@ module.exports = {
         .addStringOption(option =>
             option
                 .setName('tag')
-                .setDescription('Define a tag for the image (2 tags max)'))
-        .setDefaultMemberPermissions(0),
+                .setDescription('Define a tag for the image (2 tags max)')),
     async execute(interaction) {
         let url = 'https://danbooru.donmai.us/posts/random.json?tags=';
         let response;
@@ -76,5 +75,5 @@ module.exports = {
         }
 
         //await interaction.followUp({content: `${url}`, ephemeral: true});
-    }
-}
+    },
+};

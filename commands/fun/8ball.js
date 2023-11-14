@@ -49,5 +49,5 @@ module.exports = {
             await interaction.reply(`> *${question}*\n**${quote}**`);
             //await interaction.reply(quote);
         }
-    }
-}
+    },
+};

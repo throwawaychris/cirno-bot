@@ -73,5 +73,5 @@ module.exports = {
         if (msg != "") {
             await interaction.followUp(msg);
         }
-    }
-}
+    },
+};
