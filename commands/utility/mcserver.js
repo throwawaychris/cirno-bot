@@ -55,6 +55,6 @@ module.exports = {
 
         // Post the data
         await interaction.reply({embeds: [mcserverEmbed]});
-        await interaction.followUp(`Play with us at __*${ipaddr}*__!`);
+        await interaction.followUp(`Play with us at __*${ipaddr}*__`);
     },
 };
