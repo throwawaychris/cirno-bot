@@ -11,8 +11,9 @@ A light weight Cirno-themed discord bot. For personal usage & fun.
 ## Getting Started
 
 1. Install [node](https://nodejs.org/en/) if you haven't already.
-   > [!WARNING]
-   > Make sure it's ```v16.11.0``` or higher. Check the version by typing ```node -v```.
+
+> [!WARNING]
+> Make sure it's ```v16.11.0``` or higher. Check the version by typing ```node -v```.
    
 3. Clone the repository into the location of you're choosing.
 
@@ -86,6 +87,28 @@ Adjust ```index.js``` and ```deploy-commands.js``` to use .env.
 
 > [!NOTE]
 > You can find more information about this [here](https://discordjs.guide/creating-your-bot/#using-config-json).
+
+## Setting up minecraft server config
+There's a built in minecraft server status command incase you have a minecraft server running.
+
+To set-up the command to work properly, you must setup the necessary variables in ```config.json``` like so.
+```json
+{
+    "token": "YOUR_BOT_TOKEN",
+    "clientId": "YOUR_CLIENT_ID",
+    "guildId": "YOUR_GUILD_ID",
+    "mcserver": {
+        "ipaddr" : "YOUR_MINECRAFT_SERVER_IP",
+        "title" : "YOUR_SERVER_TITLE_TO_DISPLAY",
+        "icon" : "THE_SERVER_ICON_URL_OF_YOUR_SERVER"
+    }
+}
+```
+> [!WARNING]
+> Delete the mcserver.js if you aren't going to use it, and just re-deploy the commands.
+
+> [!NOTE]
+> Automatic icon fetching has not been added yet. (Get on it, me)
 
 ## Usage
 
