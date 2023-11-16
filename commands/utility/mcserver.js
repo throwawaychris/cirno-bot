@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { ipaddr, server_title, server_icon } = require('../../configs/mcserver.json');
+const { mcserver } = require('../../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -7,7 +7,7 @@ module.exports = {
         .setDescription('Get the minecraft server information'),
     async execute(interaction) {
         // Construct server status url
-        let url = `https://api.mcstatus.io/v2/status/java/${ipaddr}`;
+        let url = `https://api.mcstatus.io/v2/status/java/${mcserver.ipaddr}`;
         let data, response;
 
         // Fetch the mcstatus.io json 
@@ -29,10 +29,10 @@ module.exports = {
 
         const mcserverEmbed = {
             color: 0x32a854,
-            title: server_title,
+            title: mcserver.title,
             description: `\`\`\`${data.motd.clean}\`\`\``,
             thumbnail: {
-                url: server_icon,
+                url: mcserver.icon,
             },            
             fields: [
                 {
@@ -55,6 +55,6 @@ module.exports = {
 
         // Post the data
         await interaction.reply({embeds: [mcserverEmbed]});
-        await interaction.followUp(`Play with us at __*${ipaddr}*__`);
+        await interaction.followUp(`Play with us at __*${mcserver.ipaddr}*__`);
     },
 };
