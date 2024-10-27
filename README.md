@@ -169,7 +169,8 @@ Since ```index.js``` already comes with ```#!/usr/bin/env node```, you can ```ch
    After=network.target
 
    [Service]
-   ExecStart= # Whereever you put Cirno in (ie. /home/user/cirno-bot/index.js)
+   # Whereever you put Cirno in (ie. /home/user/cirno-bot/index.js)
+   ExecStart=/path/to/cirno/index.js
    Restart=always
    # Use your username if you have sole permissions to the directory
    User=nobody
@@ -178,7 +179,8 @@ Since ```index.js``` already comes with ```#!/usr/bin/env node```, you can ```ch
    Group=nogroup
    Environment=PATH=/usr/bin:/usr/local/bin
    Environment=NODE_ENV=production
-   WorkingDirectory= # Whereever you put Cirno in (ie. /home/user/cirno-bot)
+   # Whereever you put Cirno in (ie. /home/user/cirno-bot)
+   WorkingDirectory=/path/to/cirno
 
    [Install]
    WantedBy=multi-user.target
